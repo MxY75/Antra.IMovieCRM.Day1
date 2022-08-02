@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace IMovieCRM.Core.Contracts.Service
 {
-    public interface ICastService
+    public interface IMovieServiceAsync
     {
-
-        Task<int> InsertCast(CastModel castModel);
-        Task<IEnumerable<CastModel>> GetAllCasts();
-        Task<CastModel> GetCastByIdAsync(int id);
+        Task<MovieResponseModel> GetByIdAsync(int id);
     }
 }

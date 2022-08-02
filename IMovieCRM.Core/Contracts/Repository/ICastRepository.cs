@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IMovieCRM.Core.Contracts.Repository
 {
-    public interface ICastRepository
+    public interface ICastRepository :IRepositoryAsync<Entity.Cast>
     {
     }
 }

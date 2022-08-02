@@ -3,10 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using IMovieCRM.Core.Entity;
 
 namespace IMovieCRM.Core.Contracts.Repository
 {
-    public interface IReportRepository
+   public interface IMovieCastRepositoryAsync : IRepositoryAsync<MovieCast>
     {
+        Task<IEnumerable<MovieCast>> GetAllByMovieIdAsync(int movieId);
     }
 }

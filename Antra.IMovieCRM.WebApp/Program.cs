@@ -1,11 +1,18 @@
+using IMovieCRM.Core.Contracts.Repository;
+using IMovieCRM.Core.Contracts.Service;
 using IMovieCRM.Infrastructure.Data;
+using IMovieCRM.Infrastructure.Repository;
+using IMovieCRM.Infrastructure.Service;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
-builder.Services.AddSqlServer<IMovieCrmDBContext>(builder.Configuration.GetConnectionString("IMovieCRM"));
+builder.Services.AddSqlServer<IMovieCrmDBContext>(builder.Configuration.GetConnectionString("IMovie"));
+
+builder.Services.AddScoped<ICastRepository, CastRepository>();
+builder.Services.AddScoped<ICastService, CastService>();
 
 var app = builder.Build();
 

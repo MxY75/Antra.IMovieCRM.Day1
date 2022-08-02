@@ -1,0 +1,42 @@
+﻿@model IEnumerable<CastModel>
+<div class="container-fluid border">
+            <div class="row">
+
+                <div class="col">
+                    <div class="card" style="width: 18rem;">
+                   
+                        <div class="card-body">
+                          <h5 class="card-title border-bottom">Movie Facts</h5>
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item"> <i class="bi-calendar"></i>  Release Date       <span class="badge bg-secondary">Secondary</span></li>
+                          <li class="list-group-item"><i class="bi-hourglass-split"></i> Run Time      <span class="badge bg-secondary">Secondary</span></li>
+                          <li class="list-group-item"> <i class="bi-cash"></i> Box Office      <span class="badge bg-secondary">Secondary</span></li>
+                          <li class="list-group-item"><i class="bi-currency-dollar"></i> Budget     <span class="badge bg-secondary">Secondary</span></li>
+                          <li class="list-group-item"><i class="bi-arrow-right-square-fill"></i>   <i class="bi-box-arrow-up-right"></i></li>
+                        </ul>
+
+                        <div class="card-body">
+                            <h5 class="card-title">TRALIERS</h5>
+                          </div>
+                          <ul class="list-group list-group-flush">
+                            <li class="list-group-item"><i class="bi-youtube"></i></li>
+                            </ul>
+                     
+                      </div>
+                </div>
+
+                <div class="col">
+
+                    <div class="card-body">
+                        <h5 class="card-title border-bottom">CAST</h5>
+                      </div>
+                      <ul class="list-group list-group-flush">
+                         @foreach(var m in Model){
+                           <li class="list-group-item">@m.Id  @m.Name @m.TmdbUrl @m.ProfilePath</li>
+                       
+                         }
+                        </ul> 
+                </div>
+                </div><!--row-->
+            </div><!---movie facts and cast-->

@@ -7,6 +7,10 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="Views\Cast\List.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="Microsoft.EntityFrameworkCore" Version="6.0.7" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="6.0.7">
       <PrivateAssets>all</PrivateAssets>
@@ -16,6 +20,18 @@
 
   <ItemGroup>
     <ProjectReference Include="..\IMovieCRM.Infrastructure\IMovieCRM.Infrastructure.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <_ContentIncludedByDefault Remove="Views\Cast\List.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="Views\Cast\List.cshtml" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <UpToDateCheckInput Remove="Views\Cast\List.cshtml" />
   </ItemGroup>
 
 </Project>
