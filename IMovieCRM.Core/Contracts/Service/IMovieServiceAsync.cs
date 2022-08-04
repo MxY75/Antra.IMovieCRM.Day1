@@ -9,6 +9,6 @@ namespace IMovieCRM.Core.Contracts.Service
 {
     public interface IMovieServiceAsync
     {
-        Task<MovieResponseModel> GetByIdAsync(int id);
+        Task<MovieModel> GetByIdAsync(int id);
     }
 }

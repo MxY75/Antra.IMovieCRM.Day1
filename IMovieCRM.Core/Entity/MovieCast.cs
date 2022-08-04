@@ -9,7 +9,7 @@ namespace IMovieCRM.Core.Entity
     public class MovieCast
     {
 
-
+        public int id { get; set; }
         public int MovieId { get; set; }
         public int CastId { get; set; }
         public string Character { get; set; }

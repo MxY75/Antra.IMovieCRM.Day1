@@ -9,10 +9,18 @@ var builder = WebApplication.CreateBuilder(args);
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+builder.Services.AddScoped<ICastRepository, CastRepository>();
+builder.Services.AddScoped<IMovieCastRepositoryAsync, MovieCastRepositoryAsync>();
+builder.Services.AddScoped<IMovieGenreRepositoryAsync, MovieGenreRepositoryAsyn>();
+builder.Services.AddScoped<IGenreRepositoryAsync,GenreRepositoryAsyn>();
+
+builder.Services.AddScoped<ICastService, CastService>();
+builder.Services.AddScoped<IMovieCastServiceAsync, MovieCastService>();
+builder.Services.AddScoped<IMovieGenreService, MovieGenreService>();
+builder.Services.AddScoped<IGenreService, GenreService>();
+
 builder.Services.AddSqlServer<IMovieCrmDBContext>(builder.Configuration.GetConnectionString("IMovie"));
 
-builder.Services.AddScoped<ICastRepository, CastRepository>();
-builder.Services.AddScoped<ICastService, CastService>();
 
 var app = builder.Build();
 

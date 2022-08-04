@@ -58,10 +58,10 @@ namespace IMovieCRM.Infrastructure.Service
             if (entity != null) {
                 CastModel cast = new CastModel() {
                     Id = entity.Id,
-                Gender = entity.Gender,
-                 Name = entity.Name,
-                 TmdbUrl = entity.TmdbUrl,
-                 ProfilePath = entity.ProfilePath
+                   Gender = entity.Gender,
+                    Name = entity.Name,
+                   TmdbUrl = entity.TmdbUrl,
+                   ProfilePath = entity.ProfilePath
                 };
                 return cast;
             }

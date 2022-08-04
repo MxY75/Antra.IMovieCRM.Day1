@@ -15,5 +15,6 @@ namespace IMovieCRM.Infrastructure.Repository
         public CastRepository(IMovieCrmDBContext _context) : base(_context)
         {
         }
+
     }
 }

@@ -1,0 +1,45 @@
+﻿.sidenav {
+    background-color: #f1f1f1;
+    height: 100%;
+}
+.cast-card {
+    max-width: 100%;
+    overflow: hidden;
+}
+.card-text {
+    overflow-wrap: anywhere;
+    word-wrap: break-word;
+    word-break: normal;
+    hyphens: auto;
+}
+/*nav Genres*/
+.dropdown-menu.columns-2 {
+    min-width: 400px;
+}
+.dropdown-menu li a {
+    padding: 5px 15px;
+    font-weight: 300;
+}
+
+.multi-column-dropdown {
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+    .multi-column-dropdown li a {
+        display: block;
+        clear: both;
+        line-height: 1.428571429;
+        color: #333;
+        white-space: normal;
+    }
+
+        .multi-column-dropdown li a:hover {
+            text-decoration: none;
+            color: #262626;
+            background-color: #999;
+        }
+
+
+/*nav Genres end*/

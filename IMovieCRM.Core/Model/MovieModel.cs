@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace IMovieCRM.Core.Model
 {
-    internal class MovieModel
+    public class MovieModel
     {
 
 
@@ -29,7 +29,10 @@ namespace IMovieCRM.Core.Model
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
 
-        public string UpdatedBy { get; set; }
+        public string UpdateBy { get; set; }
         public string CreatedBy { get; set; }
+
+        public virtual IEnumerable<MovieCastModel> MovieCasts { get; set; }
+        public virtual IEnumerable<MovieGenreModel> MovieGenres { get; set; }
     }
 }

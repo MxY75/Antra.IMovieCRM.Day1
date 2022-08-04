@@ -6,9 +6,12 @@ using System.Threading.Tasks;
 
 namespace IMovieCRM.Core.Entity
 {
-    public class Genre
+    public class MovieGenre
     {
         public int Id { get; set; }
-        public string Name { get; set; }
+        public int MovieId { get; set; }
+        public int GenreId { get; set; }
+        public Movie Movie { get; set; }
+        public Genre Genre { get; set; }
     }
 }

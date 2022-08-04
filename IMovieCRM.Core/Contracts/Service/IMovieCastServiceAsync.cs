@@ -10,5 +10,6 @@ namespace IMovieCRM.Core.Contracts.Service
     public interface IMovieCastServiceAsync
     {
     Task<IEnumerable<MovieCastModel>> GetAllByMovieId(int id);
+     Task<IEnumerable<MovieCastModel>> GetAllByCastId(int id);
     }
 }

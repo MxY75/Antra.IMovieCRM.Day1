@@ -1,4 +1,4 @@
-﻿using IMovieCRM.Core.Contracts.Service;
+﻿ using IMovieCRM.Core.Contracts.Service;
 using IMovieCRM.Core.Model;
 using Microsoft.AspNetCore.Mvc;
 
@@ -7,10 +7,12 @@ namespace Antra.IMovieCRM.WebApp.Controllers
     public class CastController : Controller
     {
         ICastService castService;
+        IMovieCastServiceAsync movieCastServiceAsync;
 
-        public CastController(ICastService castService)
+        public CastController(ICastService castService, IMovieCastServiceAsync movieCastServiceAsync)
         {
             this.castService = castService;
+            this.movieCastServiceAsync = movieCastServiceAsync; 
         }
 
         public async Task<IActionResult> Index()
@@ -35,8 +37,9 @@ namespace Antra.IMovieCRM.WebApp.Controllers
         }
 
         [HttpGet]
-        public async Task<IActionResult> Edit(int id) {
+        public async Task<IActionResult> Detail(int id) {
             CastModel model = await castService.GetCastByIdAsync(id);
+            model.MovieCasts = await movieCastServiceAsync.GetAllByCastId(id);
             return View(model);
         }
     }

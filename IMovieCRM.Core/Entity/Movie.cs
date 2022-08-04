@@ -24,11 +24,11 @@ namespace IMovieCRM.Core.Entity
         public DateTime ReleaseDate { get; set; }
         public int Runtime { get; set; }
 
-        public decimal Price { get; set; }
+        public decimal? Price { get; set; }
         public DateTime CreatedDate { get; set; }
         public DateTime UpdatedDate { get; set; }
 
-        public string UpdatedBy { get; set; }
-        public string CreatedBy { get; set; }
+        public string? UpdateBy { get; set; }
+        public string? CreatedBy { get; set; }
     }
 }

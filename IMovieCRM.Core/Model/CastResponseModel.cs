@@ -15,6 +15,6 @@ namespace IMovieCRM.Core.Model
         public string Character { get; set; }
         public string Gender { get; set; }
         public string ProfilePath { get; set; }
-        public List<MovieCast> Movies { get; set; }
+        public virtual IEnumerable<MovieCastModel> MovieCasts { get; set; }
     }
 }

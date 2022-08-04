@@ -1,0 +1,65 @@
+﻿@model CastModel
+
+<div class="container-fluid">
+  <div class="row content">
+    <div class="col-md-3 sidenav">
+      <h4>Cast Name</h4>
+      <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="@Model.ProfilePath" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">@Model.Name</h5>
+          <p class="card-text">@Model.Name Angela Mellissa Griffin is a British
+              actress and television presenter who has been active on British television
+              since the early 1990s. She is best known for her roles as Kim Campbell in Waterloo Road,
+              and as DS Lizzie Maddox in the final two series of Lewis.</p>
+        </div>
+        <ul class="list-group list-group-flush">
+            @{
+                      var gender = "";
+                      if (Model.Gender == "1")
+                      {
+                          gender = "she/her";
+                      }
+                      else if (Model.Gender == "2")
+                      {
+                          gender = "he/him";
+                      }
+                      else
+                      {
+                          gender = "they/them";
+                      }
+                  }
+              <li class="list-group-item">@gender</li>
+        </ul>
+        <br></br>
+</div>      
+      <div class="input-group">
+        <input type="text" class="form-control" placeholder="Search Movie..">
+        <span class="input-group-btn">
+          <button class="btn btn-default" type="button">
+            <span class="glyphicon glyphicon-search"></span>
+          </button>
+        </span>
+      </div>
+    </div>
+
+    <div class="col-sm-9">
+        <div class="row">
+        @foreach (var item in Model.MovieCasts)
+        {
+           <div class="col-lg-4 d-flex align-items-stretch">
+                <div class="card card-inverse card-primary card-cast" >
+                  <div class="card-block">
+          
+            <img class="card-img-top" src="@item.Movie.PosterUrl" alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">@item.Movie.Title</h5>
+              
+                <a href="#" class="btn btn-primary">See Deatils</a>
+          </div>
+        </div>
+        </div>
+        </div>
+        }
+    </div>
+</div>

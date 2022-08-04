@@ -10,5 +10,6 @@ namespace IMovieCRM.Core.Contracts.Repository
    public interface IMovieCastRepositoryAsync : IRepositoryAsync<MovieCast>
     {
         Task<IEnumerable<MovieCast>> GetAllByMovieIdAsync(int movieId);
+        Task<IEnumerable<MovieCast>> GetAllByCastIdAsync(int castId);
     }
 }

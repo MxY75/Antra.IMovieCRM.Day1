@@ -17,5 +17,9 @@ namespace IMovieCRM.Core.Model
         }
         public string PosterUrl { get; set; }
         public DateTime ReleaseDate { get; set; }
+
+        public virtual IEnumerable<MovieGenreModel> MovieGenre { get; set; }
+
     }
 }
+ 
