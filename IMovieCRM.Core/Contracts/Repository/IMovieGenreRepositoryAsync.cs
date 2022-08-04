@@ -12,6 +12,7 @@ namespace IMovieCRM.Core.Contracts.Repository
     {
         Task<IEnumerable<MovieGenre>> GetAllByGenreIdAsync(int genreId);
         Task<IEnumerable<MovieGenre>> GetAllByMovieIdAsync(int movieId);
+        //test azure
         
     }
 }
